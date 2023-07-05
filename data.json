@@ -1,0 +1,51 @@
+{
+    "menu": [
+        {
+            "id": 1,
+            "name": "Pizza",
+            "price": 10.99,
+            "available": "false",
+            "stock": 8
+        },
+        {
+            "id": 2,
+            "name": "Burger",
+            "price": 5.99,
+            "available": "false",
+            "stock": 10
+        },
+        {
+            "id": 3,
+            "name": "Samosa",
+            "price": "12",
+            "stock": "10",
+            "available": true
+        }
+    ],
+    "orders": [
+        {
+            "order_id": 1,
+            "customer_name": "Chinnu",
+            "items": [
+                {
+                    "dish_id": 2,
+                    "quantity": 3
+                }
+            ],
+            "status": "received",
+            "total_price": 17.97
+        },
+        {
+            "order_id": 2,
+            "customer_name": "Chinnu",
+            "items": [
+                {
+                    "dish_id": 1,
+                    "quantity": 2
+                }
+            ],
+            "status": "received",
+            "total_price": 21.98
+        }
+    ]
+}
