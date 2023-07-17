@@ -5,6 +5,9 @@ from flask import jsonify
 from flask_bcrypt import Bcrypt
 from pymongo import MongoClient
 from bson import json_util
+import os
+from dotenv import load_dotenv
+
 # import openai
 OPENAI_API_KEY="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"
 
@@ -14,7 +17,8 @@ bcrypt = Bcrypt(app)
 
 # Login and signup
 
-client = MongoClient("mongodb+srv://anji:kommu@cluster0.dxyi0uo.mongodb.net/Zomato?retryWrites=true&w=majority")
+mongoUrl=os.environ.get('MONGO_URL')
+client = MongoClient(mongoUrl)
 db = client["Zomato"]
 users_collection = db["users"]
 menu_collection = db["menu"]
