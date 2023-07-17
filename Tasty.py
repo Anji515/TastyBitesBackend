@@ -85,9 +85,9 @@ def adminLogin():
         return jsonify({"Error": "Invalid username or password"}), 201
 
 
-# @app.route('/')
-# def home():
-#     return render_template('home.html')
+@app.route('/')
+def home():
+    return render_template('home.html')
 
 @app.route('/menu', methods=['POST'])
 def add_dish():
